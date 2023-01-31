@@ -1,0 +1,39 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="index.css">
+        <link
+            href="https://fonts.googleapis.com/css?family=Montserrat"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+     
+        <div class="container">
+            <h1 class="title">Color Lighten/Darken</h1>
+            
+            <label for="hex">Color (Hex)</label>
+            <input type="text" name="hex" id="hexInput" 
+            placeholder="#000000" value="#c6d5ac"/>
+            
+            <div class="toggle">
+                <p id="lightenText" 
+                class="toggle-text">Lighten</p>
+                <div id="toggleBtn" class="toggle-btn">
+                    <div class="inner-circle"></div>
+                </div>
+                <p id="darkenText" 
+                class="toggle-text unselected">Darken</p>
+            </div>
+            
+            <label for="slider" id="sliderText">0%</label>
+            <input type="range" min="0" max="100" value="0"
+                class="slider" id="slider" name="slider"</input>
+            <p>Input Color</p>
+            <div id="inputColor" class="box"></div>
+            <p id="alteredColorText">Altered Color</p>
+            <div id="alteredColor" class="box"></div>
+        </div>
+        
+        <script src="index.pack.js"></script>
+    </body>
+</html>
