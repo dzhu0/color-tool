@@ -1,24 +1,31 @@
-* {
-    margin: 0;
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
     padding: 0;
+    margin: 0;
 }
 
 body {
+    height: 100vh;
+    background-color: #575e79;
     font-family: 'Montserrat', sans-serif;
-    background-color: #3e4560;
     color: white;
+    display: flex;
 }
 
 .container {
-    padding: 0 10px;
     width: 400px;
-    margin: 100px auto;
+    background-color: #3e4560;
+    border-radius: 5px;
+    padding: 30px 10px;
+    margin: auto;
 }
 
 .title {
     text-align: center;
-    margin: 20px;
     color: #d6d5ac;
+    margin-bottom: 20px;
 }
 
 label {
@@ -27,22 +34,22 @@ label {
     margin-bottom: 5px;
 }
 
-input {
-    margin-bottom: 25px;
-}
+input { margin-bottom: 25px; }
 
 input[type="text"] {
     padding: 5px 10px;
     border-radius: 3px;
     border: none;
+    outline: none;
 }
 
 .box {
-    height:100px;
-    width: 100%;
+    height: 100px;
     background-color: #c6d5ac;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
+
+.box:last-child { margin-bottom: 0; }
 
 .toggle-text {
     font-size: 18px;
@@ -51,31 +58,29 @@ input[type="text"] {
 .toggle {
     display: flex;
     align-items: center;
+    gap: 10px;
     margin-bottom: 20px
 }
 
 .toggle-btn {
+    width: 50px;
     height: 30px;
-    width: 60px;
     background-color: gray;
     border-radius: 30px;
     padding: 5px;
-    margin: 0 10px;
 }
 
 .inner-circle {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
+    width: 20px;
+    height: 20px;
     background-color: white;
-    transition: all 250ms;
+    border-radius: 50%;
+    transition: all 0.25s;
 }
 
 .toggle-btn.toggled > .inner-circle {
-    transform: translateX(30px);
     background-color: #333;
+    transform: translateX(20px);
 }
 
-.unselected {
-    opacity: 0.25;
-}
+.unselected { opacity: 0.25; }

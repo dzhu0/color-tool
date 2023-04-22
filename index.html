@@ -1,39 +1,54 @@
-<html>
-    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-        <link rel="stylesheet" href="index.css">
-        <link
-            href="https://fonts.googleapis.com/css?family=Montserrat"
-            rel="stylesheet"
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>Color Tool</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">Color<br/>Lighten/Darken</h1>
+
+        <label for="hex-input">Color (Hex)</label>
+        <input
+            type="text"
+            value="#c6d5ac"
+            placeholder="#000000"
+            id="hex-input"
+            name="hex-input"
         />
-    </head>
-    <body>
-     
-        <div class="container">
-            <h1 class="title">Color Lighten/Darken</h1>
-            
-            <label for="hex">Color (Hex)</label>
-            <input type="text" name="hex" id="hexInput" 
-            placeholder="#000000" value="#c6d5ac"/>
-            
-            <div class="toggle">
-                <p id="lightenText" 
-                class="toggle-text">Lighten</p>
-                <div id="toggleBtn" class="toggle-btn">
-                    <div class="inner-circle"></div>
-                </div>
-                <p id="darkenText" 
-                class="toggle-text unselected">Darken</p>
+
+        <div class="toggle">
+            <p id="lighten-text" class="toggle-text">Lighten</p>
+            <div id="toggle-btn" class="toggle-btn">
+                <div class="inner-circle"></div>
             </div>
-            
-            <label for="slider" id="sliderText">0%</label>
-            <input type="range" min="0" max="100" value="0"
-                class="slider" id="slider" name="slider"></input>
-            <p>Input Color</p>
-            <div id="inputColor" class="box"></div>
-            <p id="alteredColorText">Altered Color</p>
-            <div id="alteredColor" class="box"></div>
+            <p id="darken-text" class="toggle-text unselected">Darken</p>
         </div>
+
+        <label for="slider" id="slider-text">0%</label>
+        <input
+            type="range"
+            min="0" 
+            max="100"
+            value="0"
+            id="slider"
+            class="slider"
+            name="slider"
+        />
         
-        <script src="index.js"></script>
-    </body>
+        <p>Input Color</p>
+        <div id="input-color" class="box"></div>
+
+        <p id="altered-color-text">Altered Color #c6d5ac</p>
+        <div id="altered-color" class="box"></div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
 </html>
