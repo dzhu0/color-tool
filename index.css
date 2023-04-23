@@ -37,11 +37,14 @@ label {
 input { margin-bottom: 25px; }
 
 input[type="text"] {
-    padding: 5px 10px;
-    border-radius: 3px;
+    width: 108px;
     border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
     outline: none;
 }
+
+.error { color: rgb(235, 46, 46); }
 
 .box {
     height: 100px;
@@ -68,6 +71,8 @@ input[type="text"] {
     background-color: gray;
     border-radius: 30px;
     padding: 5px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .inner-circle {

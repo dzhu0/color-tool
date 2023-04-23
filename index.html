@@ -16,11 +16,13 @@
         <label for="hex-input">Color (Hex)</label>
         <input
             type="text"
+            maxlength="7"
             value="#c6d5ac"
             placeholder="#000000"
             id="hex-input"
             name="hex-input"
         />
+        <span id="error" class="error"></span>
 
         <div class="toggle">
             <p id="lighten-text" class="toggle-text">Lighten</p>
@@ -44,7 +46,7 @@
         <p>Input Color</p>
         <div id="input-color" class="box"></div>
 
-        <p id="altered-color-text">Altered Color #c6d5ac</p>
+        <p>Altered Color <span id="altered-color-text">#c6d5ac</span></p>
         <div id="altered-color" class="box"></div>
     </div>
 
